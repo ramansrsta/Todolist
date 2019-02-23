@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TodosController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,9 +13,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','TodosController@index');
 
+Route::resource('todo','TodosController');
 
 
